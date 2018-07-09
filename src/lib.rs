@@ -36,8 +36,8 @@ pub mod videoio;
 
 pub use core::*;
 pub use mat::*;
+pub use errors::*;
 
-use errors::*;
 use failure::Error;
 use std::ffi::{CStr, CString};
 use std::mem;
