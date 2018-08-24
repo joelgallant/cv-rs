@@ -3,7 +3,6 @@
 extern crate cv;
 
 use cv::imgcodecs::*;
-use cv::objdetect::*;
 use cv::*;
 use std::fs::File;
 use std::io::Read;
@@ -69,12 +68,6 @@ fn load_image_as_buf<P: AsRef<Path>>(img: P) -> Vec<u8> {
     let mut buf = Vec::new();
     File::open(d).unwrap().read_to_end(&mut buf).unwrap();
     buf
-}
-
-pub fn load_frontal_face() -> CascadeClassifier {
-    let mut d = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    d.push("assets/haarcascade_frontalface_default.xml");
-    CascadeClassifier::from_path(d).unwrap()
 }
 
 pub fn get_asset_path(name: &'static str) -> PathBuf {

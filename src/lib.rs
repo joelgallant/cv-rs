@@ -29,8 +29,6 @@ pub mod highgui;
 pub mod imgcodecs;
 pub mod imgproc;
 pub mod mat;
-pub mod objdetect;
-pub mod text;
 pub mod video;
 pub mod videoio;
 

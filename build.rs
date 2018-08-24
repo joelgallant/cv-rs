@@ -100,8 +100,6 @@ mod unix {
         println!("cargo:rustc-link-lib=opencv_img_hash");
         println!("cargo:rustc-link-lib=opencv_imgcodecs");
         println!("cargo:rustc-link-lib=opencv_imgproc");
-        println!("cargo:rustc-link-lib=opencv_objdetect");
-        println!("cargo:rustc-link-lib=opencv_text");
         println!("cargo:rustc-link-lib=opencv_videoio");
         println!("cargo:rustc-link-lib=opencv_video");
         if cfg!(feature = "cuda") {
