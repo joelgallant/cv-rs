@@ -122,6 +122,9 @@ fn main() {
         .cpp(true)
         .files(files)
         .include("native")
+        .include("/usr/arm-linux-gnueabihf/include")
+        .include("/usr/arm-linux-gnueabihf/include/c++/8")
+        .include("/usr/arm-linux-gnueabihf/include/c++/8/arm-linux-gnueabihf")
         .include(opencv_include());
 
     if cfg!(not(target_env = "msvc")) {
